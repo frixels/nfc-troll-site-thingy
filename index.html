@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+    .message {
+      font-size: 24px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+<div class="message">Tap anywhere to continue...</div>
+
+<audio id="prankSound" src="sound.mp3"></audio>
+
+<script>
+  const audio = document.getElementById("prankSound");
+
+  function playSound() {
+    audio.volume = 1.0;
+    audio.play();
+  }
+
+  document.body.addEventListener("click", playSound);
+  document.body.addEventListener("touchstart", playSound);
+</script>
+
+</body>
+</html>
